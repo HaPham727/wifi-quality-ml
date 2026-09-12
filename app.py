@@ -2,17 +2,13 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-from src.preprocessing import prepare_features
-
-
 # =========================
 # 1. Load trained model
 # =========================
 
-MODEL_PATH = "models/linear_regression_pipeline.joblib"
+MODEL_PATH = "models/linear_regression_model.joblib"
 
 model = joblib.load(MODEL_PATH)
-
 
 # =========================
 # 2. Page configuration
@@ -101,10 +97,10 @@ if st.button("Predict Throughput"):
 
     # Apply the same feature engineering
     # used during model training
-    X_input = prepare_features(input_data)
+    X_input = input_data
 
     # Make prediction
-    prediction = model.predict(X_input)[0]
+    prediction = model.predict(input_data)[0]
 
     # Prevent negative displayed throughput
     prediction = max(0, prediction)
