@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # =========================
-# 1. Load trained model
+# 1. Load mô hình
 # =========================
 
 MODEL_PATH = "models/linear_regression_model.joblib"
@@ -11,31 +11,29 @@ MODEL_PATH = "models/linear_regression_model.joblib"
 model = joblib.load(MODEL_PATH)
 
 # =========================
-# 2. Page configuration
+# 2. Config trang
 # =========================
 
 st.set_page_config(
-    page_title="Wi-Fi Throughput Predictor",
+    page_title="Dự đoán băng thông Wi-Fi",
     page_icon="📶",
     layout="centered"
 )
 
-st.title("📶 Wi-Fi Throughput Prediction")
+st.title("Dự đoán băng thông Wi-Fi")
 
 st.write(
-    "Predict Wi-Fi downlink throughput using "
-    "client-side Wi-Fi measurements."
+    "Dự đoán băng thông Wi-Fi từ các thông số đo được từ client-side,"
 )
 
-
 # =========================
-# 3. User inputs
+# 3. Nhận input người dùng
 # =========================
 
-st.header("Wi-Fi Measurements")
+st.header("Các thông số đầu vào")
 
 distance = st.number_input(
-    "Distance (m)",
+    "Khoảng cách (m)",
     min_value=0.0,
     max_value=100.0,
     value=5.0,
@@ -43,7 +41,7 @@ distance = st.number_input(
 )
 
 signal = st.number_input(
-    "Signal strength (%)",
+    "Cường độ tín hiệu (%)",
     min_value=0.0,
     max_value=100.0,
     value=80.0,
@@ -51,40 +49,39 @@ signal = st.number_input(
 )
 
 rx_rate = st.number_input(
-    "RX link rate (Mbps)",
+    "Tốc độ liên kết (Mbps)",
     min_value=0.0,
     value=433.0,
     step=1.0
 )
 
 rtt = st.number_input(
-    "RTT mean (ms)",
+    "Thời gian trễ trọn vòng (ms)",
     min_value=0.0,
     value=5.0,
     step=0.1
 )
 
 jitter = st.number_input(
-    "Jitter (ms)",
+    "Biến thiên độ trễ (ms)",
     min_value=0.0,
     value=2.0,
     step=0.1
 )
 
 packet_loss = st.number_input(
-    "Packet loss (%)",
+    "Tỷ lệ mất gói tin (%)",
     min_value=0.0,
     max_value=100.0,
     value=0.0,
     step=0.1
 )
 
-
 # =========================
-# 4. Prediction
+# 4. Dự đoán
 # =========================
 
-if st.button("Predict Throughput"):
+if st.button("Dự đoán băng thông"):
 
     input_data = pd.DataFrame([{
         "distance_m": distance,
@@ -106,5 +103,5 @@ if st.button("Predict Throughput"):
     prediction = max(0, prediction)
 
     st.success(
-        f"Predicted Throughput: {prediction:.2f} Mbps"
+        f"Băng thông dự đoán là: {prediction:.2f} Mbps"
     )
