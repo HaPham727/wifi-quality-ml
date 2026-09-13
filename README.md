@@ -105,11 +105,16 @@ Repo này có workflow như sau:
 - pip
 - Một ứng dụng có thể mở file `.ipynb` như PyCharm hoặc Jupyter Lab/Notebook
 
-### Theo dõi từng bước của quá trình học máy
+#### Có hai hình thức sử dụng repo này:
+
+### Hình thức 1: Sử dụng để theo dõi từng bước của quá trình học máy
 - Bước 0 (Không bắt buộc): Trong directory, mở Terminal và chạy `python optional.py`
 → Mục đích: Xóa các file dữ liệu đã qua xử lý, để lại duy nhất dữ liệu thô
 - Bước 1: Trong directory, mở Terminal và chạy `pip install -r requirements.txt`
 - Bước 2: Theo thứ tự đánh số trong tên các file `.ipynb` ở folder `notebooks`, mở các file này và chạy lần lượt các cell
+    - Trong từng file `.ipynb` sẽ là 2 loại cell:
+      - Code: Chạy các cell này theo trình tự từ đầu đến cuối file để thực hiện nội dung tương ứng với file
+      - Markdown: Ghi chú, giải thích và nhận xét cho các cell code
 
 Giải thích nội dung các notebook:
 
@@ -122,7 +127,8 @@ Giải thích nội dung các notebook:
 | `05_linear_regression.ipynb` | Quá trình tạo ra, train và dự đoán bằng  mô hình Linear Regression |
 | `06_analysis.ipynb` | Phân tích và so sánh kết quả dự đoán giữa hai mô hình với nhau và với đáp án đúng   |
 
-### Sử dụng mô hình đã train trước để dự đoán băng thông bằng cách nhập biến đầu vào
+### Hình thức 2: Sử dụng để chạy mô hình đã train trước để dự đoán băng thông bằng cách nhập biến đầu vào
 - Bước 1: Trong directory, mở Terminal và chạy `pip install -r requirements.txt`
 - Bước 2: Mở lại Terminal và chạy `streamlit run app.py`
-- Bước 3: Điền lần lượt các biến đầu vào và 
+- Bước 3: Điền lần lượt các biến đầu vào 
+- Bước 4: Bấm nút "Dự đoán băng thông" để đưa ra dự đoán bằng mô hình Linear Regression
