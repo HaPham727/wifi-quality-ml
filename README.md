@@ -36,6 +36,10 @@ wifi-quality-ml/
 │   └── prediction-linear-regression/
 │       └── prediction_linear_regression.csv
 │
+├── media/
+│   └── 02_05.png
+│   └── ...
+│
 ├── models/
 │   └── linear_regression_model.joblib
 │

@@ -6,9 +6,7 @@ import joblib
 # 1. Load mô hình
 # =========================
 
-MODEL_PATH = "models/linear_regression_model.joblib"
-
-model = joblib.load(MODEL_PATH)
+model = joblib.load("models/linear_regression_model.joblib")
 
 # =========================
 # 2. Config trang
