@@ -4,11 +4,13 @@ Repo này là phần Học máy (Machine Learning) của nhóm 7, thuộc lớp 
 
 | Thành viên            |     MSSV     |
 | --------------------- | ------------ |
+| `Khúc Văn Tuấn Anh`   | `2519960005` |
 | `Trần Thị Ngọc Ánh`   | `2519960007` |
-| `Phạm Thị Ngọc Minh`  | `2519960037` |  
-| `Phạm Vũ Hoàng Hà`    | `2519960014` |
 | `Hán Huy Gia Bảo`     | `2519960008` |
-| `Khúc Văn Tuấn Anh`   | `X` |
+| `Phạm Vũ Hoàng Hà`    | `2519960014` |
+| `Phạm Thị Ngọc Minh`  | `2519960037` | 
+
+
 
 ---
 
