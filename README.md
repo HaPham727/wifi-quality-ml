@@ -2,7 +2,6 @@
 
 Repo này là phần Học máy (Machine Learning) thuộc bài tập nhóm của nhóm 7, thuộc lớp COSH201(2627-HK1)GD1.1
 
----
 ## 1. Danh sách thành viên
 | Thành viên            |     MSSV     |
 | --------------------- | ------------ |
@@ -12,21 +11,15 @@ Repo này là phần Học máy (Machine Learning) thuộc bài tập nhóm củ
 | `Phạm Vũ Hoàng Hà`    | `2519960014` |
 | `Phạm Thị Ngọc Minh`  | `2519960037` | 
 
----
 ## 2. Bài toán
 
 Từ dữ liệu thông số Wi-Fi quan sát được từ thiết bị client, cần tạo một mô hình có khả năng đưa ra dự đoán về chất lượng kết nối.
-
----
 
 ## 3. Yêu cầu về môi trường và Python version
 
 Để có trải nghiêm tối ưu, hãy đảm bảo trên máy tính có:
 - Một IDE hỗ trợ mở file `.ipynb` như PyCharm hoặc Jupyter Lab/Notebook
 - Python (3.14 trở lên)
-
-
----
 
 ## 4. Thư viện 
 
@@ -47,15 +40,12 @@ streamlit
 pip install -r requirements.txt
 ```
 
----
-
 ## 5. Dataset
 
 Dataset được sử dụng trong bài tập này đuợc thu lại bằng script được nhóm viết tại [link](https://github.com/hhgbao/wifi-data-collection).
 
 Trong repo này, dataset được lưu tại `data\raw\data-raw.csv`.
 
----
 ## 6. Cấu trúc thư mục
 ```text
 wifi-quality-ml/
@@ -98,7 +88,6 @@ wifi-quality-ml/
 └── README.md
 ```
 
----
 ## 7. Thứ tự chạy notebook
 
 Thứ tự sử dụng các file trong repo như sau:
@@ -161,7 +150,7 @@ Giải thích nội dung các file:
 | `app.py` | Chạy mô hình đã train để đưa ra dự đoán cho giá trị băng thông |
 
 
-## Hướng dẫn sử dụng repo:
+## Các bước sử dụng repo:
 
 ### Để theo dõi từng bước của quá trình học máy
 - Bước 0 (Tùy chọn): Trong directory, mở Terminal và chạy 
@@ -180,22 +169,16 @@ streamlit run app.py
 - Bước 2: Điền lần lượt các biến đầu vào 
 - Bước 3: Bấm nút "Dự đoán băng thông" để đưa ra dự đoán bằng mô hình Linear Regression
 
----
-
 # 8. Output mong đợi
 
 Ví dụ cho plot có thể tạo ra khi chạy notebook thành công:
 ![Alt text](media/02_05.png)
-
----
 
 # 9. Tái lập kết quả
 
 Bài làm Machine Learning này sử dụng duy nhất `random_state = 911` trong cell code thứ 3, file `03_preprocessing.ipynb` cho Data Splitting. Để tái lập kết quả Machine Learning đạt được trong bài làm này, không thay đổi giá trị trên.
 
 Trong trường hợp cần thực hiện Machine Learning với dataset khác, tại folder `data/raw/`, hãy dán dataset mới, xóa file `data-raw.csv` và đặt tên này cho dataset mới.
-
----
 
 # 10. Giới hạn
 
