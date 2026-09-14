@@ -42,9 +42,9 @@ pip install -r requirements.txt
 
 ## 5. Dataset
 
-Dataset được sử dụng trong bài tập này đuợc thu lại bằng script được nhóm viết tại [link](https://github.com/hhgbao/wifi-data-collection).
-
 Trong repo này, dataset được lưu tại `data\raw\data-raw.csv`.
+
+Dataset được sử dụng trong bài tập này đuợc thu lại bằng script được nhóm viết tại [link](https://github.com/hhgbao/wifi-data-collection).
 
 ## 6. Cấu trúc thư mục
 ```text
